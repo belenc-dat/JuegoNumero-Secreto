@@ -38,6 +38,7 @@ function generarNumeroSecreto() {
     if (listaNumerosSorteados.length == numeroMaximo){
         asignarTextoElemento('p', 'Ya se sortearon todos los numeros posibles');
         //Si el numero generado está incluido en la lista
+    } else {
         if (listaNumerosSorteados.includes(numeroGenerado)){
             return generarNumeroSecreto();
         } else{
@@ -66,5 +67,6 @@ function reiniciarJuego() {
     document.querySelector('#reiniciar').setAttribute('disabled', 'true');
 
 }
+
 
 condicionesIniciales();
